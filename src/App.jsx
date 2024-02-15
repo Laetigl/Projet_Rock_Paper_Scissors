@@ -17,9 +17,12 @@ export default function App() {
   const [userChoice,setUserChoice] = useState("choice")
   const [pickUser, setPickUser] = useState("")
   const [pickHouse, setPickHouse] = useState("")
+  const [counting, setCounting] = useState("")
+
 
   return (
-    <div className="boardBg w-[100vw] h-[1000px] bg-gradient-to-t from-[#1F3656] to-[#131538] flex flex-col justify-center items-center relative">
+    <div className="boardBg w-[100vw] h-[1000px] bg-gradient-to-t from-[#1F3656] to-[#131538] flex flex-col justify-center items-center relative;
+    ">
       <Home></Home>
 
       <div className='flex gap-4'>
@@ -34,7 +37,6 @@ export default function App() {
         {pickHouse == "rock" && <Rock ></Rock> }
         {pickHouse == "scissors" && <Scissors ></Scissors> }
 
-      
       </div>
       {/* Winner conditions */}
       {userChoice == "paper" && pickHouse == "rock" ? <Win setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Win> : null}

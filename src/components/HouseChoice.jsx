@@ -4,13 +4,6 @@ import rock from "../assets/images/icon-rock.svg"
 import scissors from "../assets/images/icon-scissors.svg"
 
 export default function HouseChoice() {
-   let arrayChoice =[paper,rock,scissors]
-
-   let randomImg = arrayChoice[Math.floor(Math.random()*3)]
-   console.log(randomImg);
-   {randomImg == paper? 1 :""}
-   {randomImg == rock? 2 :""}
-   {randomImg == paper? 3 :""}
 
   return (  
     <div className='flex flex-col justify-center items-center gap-[20px] text-white text-[25px]'>
