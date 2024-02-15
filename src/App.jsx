@@ -1,22 +1,30 @@
 import React, { useState } from 'react'
 import './App.css'
 import Home from './components/Home'
-import Modal from './components/Modal'
 import Rules from './components/Rules'
 import Choices from './components/Choices'
+import Paper from './components/Paper'
+import Scissors from './components/Scissors'
+import Rock from './components/Rock'
 
 export default function App() {
   const [rulesDisplay, setRulesDisplay] = useState(0)
-  // Modal - Affichage conditionnel = mettre à 0 de base (ne saffiche pas) mais si mis à 1 alors s'affiche
-
+  const [userChoice,setUserChoice] = useState("choice")
   return (
-    <div className="boardBg w-[100vw] h-[1000px] bg-gradient-to-t from-[#1F3656] to-[#131538] flex flex-col justify-center items-center relative">
+    <div className="boardBg w-[100vw] h-[1000px] bg-gradient-to-t from-[#1F3656] to-[#131538] flex flex-col justify-center items-center relative gap-[20px]">
       <Home></Home>
-      <Choices></Choices>
-     
-        <button onClick={()=> {setRulesDisplay(1)}} className=' border border-white'> Button</button>
-        {rulesDisplay == "1" && <Rules setRulesDisplay={setRulesDisplay}></Rules>}
-     
+      
+      <div>
+      {/* Display the choice of the player with a condition and calling the right component */}
+        {userChoice == "paper" && <Paper ></Paper>}
+        {userChoice == "rock" && <Rock ></Rock>}
+        {userChoice == "scissors" && <Scissors ></Scissors>}
+        {userChoice == "choice" && <Choices setUserChoice={setUserChoice} ></Choices>}
+      </div>
+
+      {/* Display of the rules modal */}
+      <button onClick={()=> {setRulesDisplay(1)}} className='homeRules border border-white text-white w-[150px] p-[10px]'>RULES</button>
+      {rulesDisplay == "1" && <Rules setRulesDisplay={setRulesDisplay}></Rules>}
 
     </div>
   )

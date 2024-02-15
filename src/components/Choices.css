@@ -1,14 +1,20 @@
 .triangleBg{
     background-image: url("../assets/images/bg-triangle.svg");
     background-repeat: no-repeat;
-    background-size: 100%;    
-    
+    background-size: 70%; 
+    background-position: center;   
 }
 
 .borderCirclePaper{
     border : 15px solid #4764F4
-
 }
+.iconImg{
+    transition: 0.3s;
+}
+.iconImg:hover{
+    transform: scale(1.3);
+}
+
 .borderCircleScissors{
     border: 15px solid #EC9E0D
 

@@ -1,5 +1,7 @@
 import React from 'react'
 import logo from "../assets/images/logo.svg"
+import "./../components/Home.css"
+
 
 export default function Home() {
   return (
@@ -9,8 +11,8 @@ export default function Home() {
             <img className="w-[130px]" src={logo} alt="" />
         </div>
         <div className='score w-[30%] h-[70%] p-[20px] bg-white rounded-[20px] flex flex-col justify-center items-center'>
-            <p>SCORE</p>
-            <p>nombre</p>
+            <p className='score'>SCORE</p>
+            <p>#</p>
         </div>
         </div>
     </div>
