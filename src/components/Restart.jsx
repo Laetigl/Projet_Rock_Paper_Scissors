@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Restart() {
+export default function Restart(props) {
   return (
-    <div className="flex flex-col justify-center items-center absolute w-[100vw] h-[100vh] bg-white gap-[20px]">
-        <button className='text-[30px] text-black'>PLAY AGAIN</button>
+    <div className="rounded-[50px] flex flex-col justify-center items-center absolute w-[200px] h-[50px] bg-white gap-[20px]">
+        <button onClick={()=> {props.setUserChoice("choice") ; props.setPickHouse ("")}} className='text-[20px] text-black'>PLAY AGAIN</button>
     </div>
   )
 }

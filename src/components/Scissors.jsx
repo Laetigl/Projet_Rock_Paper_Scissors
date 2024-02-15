@@ -9,7 +9,6 @@ export default function
             <button className='borderCircleScissors rounded-[50%] p-[30px] bg-white'> <img className='iconImg' src={scissors} alt="scissors" /></button>
         <p>YOU PICKED</p>
         </div>
-        <div><HouseChoice></HouseChoice></div>
     </div>
     
   )

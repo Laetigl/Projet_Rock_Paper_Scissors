@@ -11,7 +11,7 @@ export default function Rock() {
           <img className='iconImg' src={rock} alt="rock" /></button>
           <p>YOU PICKED </p>
       </div>
-      <div><HouseChoice></HouseChoice></div>
+      {/* <div><HouseChoice></HouseChoice></div> */}
     </div>
   )
 }
