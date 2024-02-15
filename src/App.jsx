@@ -10,6 +10,7 @@ import HouseChoice from './components/HouseChoice'
 import Win from './components/Win'
 import Restart from './components/Restart'
 import Looser from './components/Looser'
+import Draw from './components/Draw'
 
 export default function App() {
   const [rulesDisplay, setRulesDisplay] = useState(0)
@@ -25,7 +26,7 @@ export default function App() {
     ">
       <Home></Home>
 
-      <div className='flex gap-4'>
+      <div className='flex gap-[80px]'>
       {/* Display the choice of the player with a condition and calling the right component */}
         
         {userChoice == "paper" && <Paper ></Paper>}
@@ -47,6 +48,12 @@ export default function App() {
       {pickHouse == "paper" && userChoice == "rock" ? <Looser setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Looser> : null}
       {pickHouse == "rock" && userChoice == "scissors" ? <Looser setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Looser> : null}
       {pickHouse == "scissors" && userChoice == "paper" ? <Looser setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Looser> : null}
+
+      {/* Draw */}
+      {pickHouse == "paper" && userChoice == "paper" ? <Draw setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Draw> : null}
+      {pickHouse == "rock" && userChoice == "rock" ? <Draw setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Draw> : null}
+      {pickHouse == "scissors" && userChoice == "scissors" ? <Draw setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Draw> : null}
+
 
       {/* Display of the rules modal */}
       <button onClick={()=> {setRulesDisplay(1)}} className='homeRules border border-white text-white w-[150px] p-[10px]'>RULES</button>

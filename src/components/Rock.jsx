@@ -9,9 +9,7 @@ export default function Rock() {
       <div className='bottomHand flex flex-col justify-center items-center gap-[60px]'>
           <button className='borderCircleRock rounded-[50%] p-[30px] bg-white '> 
           <img className='iconImg' src={rock} alt="rock" /></button>
-          <p>YOU PICKED </p>
       </div>
-      {/* <div><HouseChoice></HouseChoice></div> */}
     </div>
   )
 }
