@@ -9,6 +9,7 @@ body{
 
 .boardBg{
   background-color: blue;
+  gap:100px;
   /* background: linear-gradient(circle, #1F3656, #131538); */
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }

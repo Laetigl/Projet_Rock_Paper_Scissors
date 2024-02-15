@@ -1,5 +1,4 @@
 import React from 'react'
-import bgTriangle from "../assets/images/bg-triangle.svg"
 import paper from "../assets/images/icon-paper.svg"
 import scissors from "../assets/images/icon-scissors.svg"
 import rock from "../assets/images/icon-rock.svg"

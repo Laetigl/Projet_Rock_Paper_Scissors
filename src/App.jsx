@@ -6,14 +6,17 @@ import Choices from './components/Choices'
 import Paper from './components/Paper'
 import Scissors from './components/Scissors'
 import Rock from './components/Rock'
+import HouseChoice from './components/HouseChoice'
 
 export default function App() {
   const [rulesDisplay, setRulesDisplay] = useState(0)
   const [userChoice,setUserChoice] = useState("choice")
+  const [randomChoice,setRandomChoice] = useState("random")
+
   return (
-    <div className="boardBg w-[100vw] h-[1000px] bg-gradient-to-t from-[#1F3656] to-[#131538] flex flex-col justify-center items-center relative gap-[20px]">
+    <div className="boardBg w-[100vw] h-[1000px] bg-gradient-to-t from-[#1F3656] to-[#131538] flex flex-col justify-center items-center relative">
       <Home></Home>
-      
+
       <div>
       {/* Display the choice of the player with a condition and calling the right component */}
         {userChoice == "paper" && <Paper ></Paper>}
