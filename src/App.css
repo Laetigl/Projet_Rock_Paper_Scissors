@@ -4,3 +4,8 @@ body{
   padding: 0;
   margin: 0;
 }
+
+.boardBg{
+  background-color: blue;
+  background: linear-gradient(circle, #1F3656, #131538);
+}
