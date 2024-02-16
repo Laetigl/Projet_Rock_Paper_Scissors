@@ -40,14 +40,14 @@ export default function App() {
 
       </div>
       {/* Winner conditions */}
-      {userChoice == "paper" && pickHouse == "rock" ? <Win setUserChoice={setUserChoice} setPickHouse ={setPickHouse} setCounting={setCounting}></Win>: null}
-      {userChoice == "rock" && pickHouse == "scissors" ? <Win setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Win> : null}
-      {userChoice == "scissors" && pickHouse == "paper" ? <Win setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Win> : null}
+      {userChoice == "paper" && pickHouse == "rock" ? <Win setUserChoice={setUserChoice} setPickHouse ={setPickHouse} counting={counting} setCounting={setCounting}></Win>: null}
+      {userChoice == "rock" && pickHouse == "scissors" ? <Win setUserChoice={setUserChoice} setPickHouse ={setPickHouse} counting={counting} setCounting={setCounting} ></Win> : null}
+      {userChoice == "scissors" && pickHouse == "paper" ? <Win setUserChoice={setUserChoice} setPickHouse ={setPickHouse}  counting={counting} setCounting={setCounting} ></Win> : null}
       
       {/* Looser conditions */}
-      {pickHouse == "paper" && userChoice == "rock" ? <Looser setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Looser> : null}
-      {pickHouse == "rock" && userChoice == "scissors" ? <Looser setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Looser> : null}
-      {pickHouse == "scissors" && userChoice == "paper" ? <Looser setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Looser> : null}
+      {pickHouse == "paper" && userChoice == "rock" ? <Looser setUserChoice={setUserChoice} setPickHouse ={setPickHouse} counting={counting} setCounting={setCounting}></Looser> : null}
+      {pickHouse == "rock" && userChoice == "scissors" ? <Looser setUserChoice={setUserChoice} setPickHouse ={setPickHouse} counting={counting} setCounting={setCounting}></Looser> : null}
+      {pickHouse == "scissors" && userChoice == "paper" ? <Looser setUserChoice={setUserChoice} setPickHouse ={setPickHouse} counting={counting} setCounting={setCounting}></Looser> : null}
 
       {/* Draw conditions*/}
       {pickHouse == "paper" && userChoice == "paper" ? <Draw setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Draw> : null}

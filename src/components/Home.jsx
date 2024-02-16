@@ -12,7 +12,7 @@ export default function Home(props) {
         </div>
         <div className='score lg:w-[20%] lg:h-[85%] w-[30%] h-[70%] p-[20px] bg-white rounded-[20px] flex flex-col justify-center items-center'>
             <p className='score'>SCORE</p>
-            <p>{props.counting}</p>
+            <p className='text-[60px] font-bold'>{props.counting}</p>
         </div>
         </div>
     </div>
