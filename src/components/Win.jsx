@@ -2,6 +2,7 @@ import React from 'react'
 import Restart from './Restart'
 
 export default function Win(props) {
+  // Creating a function for adding to the score
   let plus=()=>{
     props.setCounting(props.counting+1)
   }

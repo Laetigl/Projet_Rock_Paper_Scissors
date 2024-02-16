@@ -2,6 +2,7 @@ import React from 'react'
 import Restart from './Restart'
 
 export default function Looser(props) {
+  // Creating a function for decreasing to the score
   let minus=()=>{
     if (props.counting > 0) {
       props.setCounting(props.counting-1) 
