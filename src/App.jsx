@@ -18,29 +18,29 @@ export default function App() {
   const [userChoice,setUserChoice] = useState("choice")
   const [pickUser, setPickUser] = useState("")
   const [pickHouse, setPickHouse] = useState("")
-  const [counting, setCounting] = useState("")
+  const [counting, setCounting] = useState(0)
 
 
   return (
     <div className="boardBg w-[100vw] h-[1000px] bg-gradient-to-t from-[#1F3656] to-[#131538] flex flex-col justify-center items-center relative;
     ">
-      <Home></Home>
+      <Home counting={counting}></Home>
 
       <div className='flex gap-[80px]'>
       {/* Display the choice of the player with a condition and calling the right component */}
         
-        {userChoice == "paper" && <Paper ></Paper>}
-        {userChoice == "rock" && <Rock ></Rock>}
-        {userChoice == "scissors" && <Scissors ></Scissors>}
-        {userChoice == "choice" && <Choices setUserChoice={setUserChoice}  setPickHouse={setPickHouse}></Choices>}
+      {userChoice == "paper" && <Paper ></Paper>}
+      {userChoice == "rock" && <Rock ></Rock>}
+      {userChoice == "scissors" && <Scissors ></Scissors>}
+      {userChoice == "choice" && <Choices setUserChoice={setUserChoice} setPickHouse={setPickHouse}></Choices>}
 
-        {pickHouse == "paper" && <Paper ></Paper> }
-        {pickHouse == "rock" && <Rock ></Rock> }
-        {pickHouse == "scissors" && <Scissors ></Scissors> }
+      {pickHouse == "paper" && <Paper ></Paper> }
+      {pickHouse == "rock" && <Rock ></Rock> }
+      {pickHouse == "scissors" && <Scissors ></Scissors> }
 
       </div>
       {/* Winner conditions */}
-      {userChoice == "paper" && pickHouse == "rock" ? <Win setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Win> : null}
+      {userChoice == "paper" && pickHouse == "rock" ? <Win setUserChoice={setUserChoice} setPickHouse ={setPickHouse} setCounting={setCounting}></Win>: null}
       {userChoice == "rock" && pickHouse == "scissors" ? <Win setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Win> : null}
       {userChoice == "scissors" && pickHouse == "paper" ? <Win setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Win> : null}
       
@@ -49,11 +49,12 @@ export default function App() {
       {pickHouse == "rock" && userChoice == "scissors" ? <Looser setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Looser> : null}
       {pickHouse == "scissors" && userChoice == "paper" ? <Looser setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Looser> : null}
 
-      {/* Draw */}
+      {/* Draw conditions*/}
       {pickHouse == "paper" && userChoice == "paper" ? <Draw setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Draw> : null}
       {pickHouse == "rock" && userChoice == "rock" ? <Draw setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Draw> : null}
       {pickHouse == "scissors" && userChoice == "scissors" ? <Draw setUserChoice={setUserChoice} setPickHouse ={setPickHouse}></Draw> : null}
 
+      {/* Counter */}
 
       {/* Display of the rules modal */}
       <button onClick={()=> {setRulesDisplay(1)}} className='homeRules border border-white text-white w-[150px] p-[10px]'>RULES</button>
