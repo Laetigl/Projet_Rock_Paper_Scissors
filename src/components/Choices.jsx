@@ -14,11 +14,11 @@ export default function Choices(props) {
     <div className='flex justify-center items-center'>
         <div className="triangleBg flex flex-col justify-center items-center gap-[50px]">
             <div className='topHand flex gap-[60px] '>
-                <button onClick={() => {props.setUserChoice("paper");props.setPickHouse(randomImg())}} className='borderCirclePaper rounded-[50%] p-[30px] bg-white lg:w-[200px] lg:h-[200px] lg:flex lg:justify-center lg:items-center '> <img className='iconImg lg:w-[80px] lg:h-[100px]' src={paper} alt="paper" /></button>
-                <button onClick={() => {props.setUserChoice("scissors");props.setPickHouse(randomImg())}} className='borderCircleScissors rounded-[50%] p-[30px] bg-white lg:w-[200px] lg:h-[200px] lg:flex lg:justify-center lg:items-center '> <img className='iconImg lg:w-[80px] lg:h-[100px]' src={scissors} alt="scissors" /></button>
+                <button onClick={() => {props.setUserChoice("paper");props.setPickHouse(randomImg())}} className='borderCirclePaper rounded-[50%] p-[30px] bg-white lg:w-[200px] lg:h-[200px] lg:flex lg:justify-center lg:items-center '> <img className='iconImg w-[80px] h-[100px] lg:w-[80px] lg:h-[100px]' src={paper} alt="paper" /></button>
+                <button onClick={() => {props.setUserChoice("scissors");props.setPickHouse(randomImg())}} className='borderCircleScissors rounded-[50%] p-[30px] bg-white lg:w-[200px] lg:h-[200px] lg:flex lg:justify-center lg:items-center '> <img className='iconImg w-[80px] h-[100px] lg:w-[80px] lg:h-[100px]' src={scissors} alt="scissors" /></button>
             </div>
             <div className='"bottomHand'>
-                <button onClick={() => {props.setUserChoice("rock");props.setPickHouse(randomImg())}} className='borderCircleRock rounded-[50%] p-[30px] bg-white lg:w-[200px] lg:h-[200px] lg:flex lg:justify-center lg:items-center '> <img className='iconImg lg:w-[80px] lg:h-[100px]' src={rock} alt="" /></button>
+                <button onClick={() => {props.setUserChoice("rock");props.setPickHouse(randomImg())}} className='borderCircleRock rounded-[50%] p-[30px] bg-white w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] lg:flex lg:justify-center lg:items-center '> <img className='iconImg w-[80px] h-[100px] lg:w-[80px] lg:h-[100px]' src={rock} alt="" /></button>
             </div>
         </div>
     </div>

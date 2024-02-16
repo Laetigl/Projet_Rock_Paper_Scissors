@@ -12,8 +12,9 @@ body{
   gap:60px;
   /* background: linear-gradient(circle, #1F3656, #131538); */
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-}
+  color: #141539
 
+}
 .homeRules{
   border-radius: 10px;
   letter-spacing: 5px;
