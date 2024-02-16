@@ -8,6 +8,7 @@ export default function Looser(props) {
       props.setCounting(props.counting-1) 
     }
   }
+  
   return (
     <div className='flex flex-col justify-center items-center gap-[80px]'>
       <div className='flex gap-[80px] '>
